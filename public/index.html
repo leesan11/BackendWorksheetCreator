@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel='stylesheet' href='./css/style.css'>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115005039-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'UA-115005039-1');
+    </script>
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper black">
+            <a href="#!" class="center brand-logo"><span class='title-nav' style='overflow:hidden'>DIY Worksheets</span></a>
+            <ul class="left">
+                <li>
+                    <a data-target="slide-out" class="show-on-large sidenav-trigger black waves-effect waves-light btn"><i class="black material-icons nav-button">create</i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul id="slide-out" class="sidenav">
+        <li><a href="#!" class="g-7-button sidenav-close">Grade 1</a></li>
+        <li><div class="divider"></div></li>
+      <li><a href="#!" class="g-7-button sidenav-close">Grade 2</a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="#!" class="g-7-button sidenav-close">Grade 3</a></li>
+        <li><div class="divider"></div></li>
+      <li><a href="#!" class="g-7-button sidenav-close">Grade 4</a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="#!" class="g-7-button sidenav-close">Grade 5</a></li>
+        <li><div class="divider"></div></li>
+      <li><a href="#!" class="g-7-button sidenav-close">Grade 6</a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="#!" class="g-7-button sidenav-close">Grade 7</a></li>
+        <li><div class="divider"></div></li>
+      <li><a href="#!" class="g-7-button sidenav-close">Grade 8</a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="#!" class="g-7-button sidenav-close">Grade 9</a></li>
+        <li><div class="divider"></div></li>
+      <li><a href="#!" class="g-7-button sidenav-close">Grade 10</a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="#!" class="g-7-button sidenav-close">Grade 11</a></li>
+        <li><div class="divider"></div></li>
+      <li><a href="#!" class="g-7-button sidenav-close">Grade 12</a></li>
+      <li><div class="divider"></div></li>
+    </ul>
+    
+    <!-- COLLAPSIBLES-->
+<div class="container g-7-collapsible generate" style="display:none">
+    <h4 style="text-align:center">Grade 7</h4>
+    <ul class="collapsible">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">filter_drama</i>Number Sense</div>
+              <div class="collapsible-body">
+                  <ul>
+                    <li style="padding:5px"><button class="modal-trigger btn-floating create-worksheet black pulse" id="createWorksheet" data-target="modal" data='integer-addition'><i class="material-icons">add</i></button><span style="font-size:20px; margin-left:10px;">Adding Integers</span></li>
+                    <li style="padding:5px"><button class="modal-trigger btn-floating create-worksheet black pulse" id="createWorksheet" data-target="modal" data='integer-subtraction'><i class="material-icons">add</i></button><span style="font-size:20px; margin-left:10px;">Subtracting Integers</span></li>
+                    <li style="padding:5px"><button class="modal-trigger btn-floating create-worksheet black pulse" id="createWorksheet" data-target="modal" data='order-integers'><i class="material-icons">add</i></button><span style="font-size:20px; margin-left:10px;">Ordering Integers</span></li>
+                    <li style="padding:5px"><button class="modal-trigger btn-floating create-worksheet black pulse" id="createWorksheet" data-target="modal" data='order-decimals'><i class="material-icons">add</i></button><span style="font-size:20px; margin-left:10px;">Ordering Decimals</span></li>
+                    <li style="padding:5px"><button class="modal-trigger btn-floating create-worksheet black pulse" id="createWorksheet" data-target="modal" data='find-LCM'><i class="material-icons">add</i></button><span style="font-size:20px; margin-left:10px;">Find Least Common Multiple</span></li>
+                    <li style="padding:5px"><button class="modal-trigger btn-floating create-worksheet black pulse" id="createWorksheet" data-target="modal" data='find-GCF'><i class="material-icons">add</i></button><span style="font-size:20px; margin-left:10px;">Find Greatest Common Factor</span></li>
+                    <li style="padding:5px"><button class="modal-trigger btn-floating create-worksheet black pulse" id="createWorksheet" data-target="modal" data='fraction-addition'><i class="material-icons">add</i></button><span style="font-size:20px; margin-left:10px;">Adding Fractions</span></li>
+                    <li style="padding:5px"><button class="modal-trigger btn-floating create-worksheet black pulse" id="createWorksheet" data-target="modal" data='fraction-subtraction'><i class="material-icons">add</i></button><span style="font-size:20px; margin-left:10px;">Subtracting Fractions</span></li>
+                  </ul>
+                </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">place</i>Numeration</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">whatshot</i>Measurement</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+          </ul>
+</div>
+
+<!--MODALS-->
+
+<div id="modal" class="modal generate" style="height:100vh;">
+        <div class="modal-content" style="height:100%">
+          <h5 style="text-align:center">New Worksheet</h5>
+          <div style="width:100%;height:70%" id="i"></div>
+          <p>Click below to generatee a new worksheet</p>
+            <button class="btn-small create-worksheet regenerate">Create!</button>
+        </div>
+      </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="./javascript/main.js"></script>
+</body>
+
+</html>
