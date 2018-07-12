@@ -1,9 +1,10 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
-
 let pdfKIT = require("pdfkit");
-let doc = new pdfKIT();
+
+
+
 let fs = require("fs");
 
 let numb=0;
@@ -53,16 +54,34 @@ let template = {
 };
 
 app.get("/decimal", function(req, res) {
-    //doc.pipe(fs.createWriteStream('output.pdf'))
-    doc.pipe(res);
-    decimalWorksheet();
-  });
+  
+  res.writeHead(200, {
+    'Content-Type': 'application/pdf',
+    'Access-Control-Allow-Origin': '*',
+    'Content-Disposition': 'attachment; filename=out.pdf'
+});
+decimalWorksheet(res);
+//this lets client download on click
+fs.readFile(tempFile, function (err,data){
+  response.contentType("application/pdf");
+  response.send(data);
+});
+//this lets the client read pdf that is downloaded on server
+/*app.get('/', function (req, res) {
+  var filePath = "/files/my_pdf_file.pdf";
 
-function decimalWorksheet(){
-    //adding content
-    //TO DO: Add to MTFTW website somehow...
-    //template
-    
+  fs.readFile(__dirname + filePath , function (err,data){
+      res.contentType("application/pdf");
+      res.send(data);
+  });
+});
+*/
+});
+
+
+  function decimalWorksheet(res){
+    let doc = new pdfKIT();
+    doc.pipe(res);
     template.createTitle(doc,"Ordering Decimals Worksheet");
     
     template.addNameDate(doc);
@@ -85,7 +104,7 @@ function decimalWorksheet(){
     
     function appendQuestion(){
       let arr=createQuestion();
-      (store).push(arr);
+      store.push(arr);
       doc.fillColor("black");
       doc.text(arr[0],{
       });

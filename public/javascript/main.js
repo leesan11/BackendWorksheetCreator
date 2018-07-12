@@ -42,11 +42,7 @@ $(document).ready(function(){
   function decimalWorksheet(){
 
     $.get("/decimal", function(data) {
-      console.log(data);
-      if (data) {
-        let iframe = document.getElementById("i")
-      iframe.innerHTML = data;
-      }
-  
+    
+     document.getElementById("i").src="http://localhost:3000/decimal"
     });
   }

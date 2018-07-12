@@ -56761,10 +56761,11 @@ module.exports = UnicodeTrie;
     let doc = new pdfKIT();
     let fs = require("fs");
     let blobStream  = require('blob-stream');
+    let stream = doc.pipe(blobStream());
     let template = require("./template.js");
     window.numb=0;
     window.store=[];
-    let stream = doc.pipe(blobStream());
+    
     $('.regenerate').attr('data',$(this).attr('data'));
 
     switch ($(this).attr('data')){
