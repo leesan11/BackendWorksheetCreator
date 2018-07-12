@@ -43,6 +43,6 @@ $(document).ready(function(){
 
     $.get("/decimal", function(data) {
     
-     document.getElementById("i").src="http://localhost:3000/decimal"
+     document.getElementById("i").src="./decimal"
     });
   }

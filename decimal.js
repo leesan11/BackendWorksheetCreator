@@ -55,17 +55,22 @@ let template = {
 
 app.get("/decimal", function(req, res) {
   
+  
+  
+  
+  
   res.writeHead(200, {
     'Content-Type': 'application/pdf',
-    'Access-Control-Allow-Origin': '*',
-    'Content-Disposition': 'attachment; filename=out.pdf'
+    'Access-Control-Allow-Origin': '*'
 });
+/*
 decimalWorksheet(res);
 //this lets client download on click
 fs.readFile(tempFile, function (err,data){
   response.contentType("application/pdf");
   response.send(data);
 });
+*/
 //this lets the client read pdf that is downloaded on server
 /*app.get('/', function (req, res) {
   var filePath = "/files/my_pdf_file.pdf";
@@ -76,6 +81,7 @@ fs.readFile(tempFile, function (err,data){
   });
 });
 */
+decimalWorksheet(res);
 });
 
 
@@ -153,6 +159,8 @@ fs.readFile(tempFile, function (err,data){
    
     // finalize the PDF and end the stream
     doc.end();
+    numb=0;
+    store=[];
   };
 
   app.listen(PORT, function() {
